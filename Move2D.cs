@@ -6,10 +6,6 @@ public class Move2D : MonoBehaviour {
     public float moveSpeed = 5f;
     public float jumpHeight = 5f;
     public bool isGrounded = false;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
