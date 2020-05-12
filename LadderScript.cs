@@ -6,16 +6,6 @@ public class LadderScript : MonoBehaviour {
 
     public float ladderSpeed = 3;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void OnTriggerStay2D(Collider2D other) {
         if(other.tag=="Player" && Input.GetKey(KeyCode.UpArrow)) {
 
