@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CameraFollow : MonoBehaviour {
+public class RestartLevel : MonoBehaviour {
 
-    public Transform playerSprite;
-    public float offset = 3.02f;
-
-    void Update() {
-        transform.position = new Vector3(playerSprite.position.x, playerSprite.position.y + offset, transform.position.z);
+	public void RestartScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            RestartScene();
+        }
+    }
+
 }
+
+
